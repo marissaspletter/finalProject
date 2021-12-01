@@ -16,6 +16,10 @@
 		5355674B2756FAFC00AD7704 /* Final_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355674A2756FAFC00AD7704 /* Final_ProjectTests.swift */; };
 		535567552756FAFC00AD7704 /* Final_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567542756FAFC00AD7704 /* Final_ProjectUITests.swift */; };
 		535567572756FAFC00AD7704 /* Final_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567562756FAFC00AD7704 /* Final_ProjectUITestsLaunchTests.swift */; };
+		535567662757230900AD7704 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567652757230900AD7704 /* DetailTableViewController.swift */; };
+		535567682757E06B00AD7704 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567672757E06B00AD7704 /* Letter.swift */; };
+		5355676A2757EAB900AD7704 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567692757EAB900AD7704 /* ListTableViewCell.swift */; };
+		5355676C2758016600AD7704 /* LetterItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355676B2758016600AD7704 /* LetterItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		535567502756FAFC00AD7704 /* Final ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Final ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		535567542756FAFC00AD7704 /* Final_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_ProjectUITests.swift; sourceTree = "<group>"; };
 		535567562756FAFC00AD7704 /* Final_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		535567652757230900AD7704 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		535567672757E06B00AD7704 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		535567692757EAB900AD7704 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		5355676B2758016600AD7704 /* LetterItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,12 @@
 			children = (
 				535567332756FAFA00AD7704 /* AppDelegate.swift */,
 				535567352756FAFA00AD7704 /* SceneDelegate.swift */,
+				535567672757E06B00AD7704 /* Letter.swift */,
+				5355676B2758016600AD7704 /* LetterItems.swift */,
 				535567372756FAFA00AD7704 /* ViewController.swift */,
 				535567392756FAFA00AD7704 /* Main.storyboard */,
+				535567652757230900AD7704 /* DetailTableViewController.swift */,
+				535567692757EAB900AD7704 /* ListTableViewCell.swift */,
 				5355673C2756FAFC00AD7704 /* Assets.xcassets */,
 				5355673E2756FAFC00AD7704 /* LaunchScreen.storyboard */,
 				535567412756FAFC00AD7704 /* Info.plist */,
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				535567662757230900AD7704 /* DetailTableViewController.swift in Sources */,
 				535567382756FAFA00AD7704 /* ViewController.swift in Sources */,
+				535567682757E06B00AD7704 /* Letter.swift in Sources */,
 				535567342756FAFA00AD7704 /* AppDelegate.swift in Sources */,
 				535567362756FAFA00AD7704 /* SceneDelegate.swift in Sources */,
+				5355676A2757EAB900AD7704 /* ListTableViewCell.swift in Sources */,
+				5355676C2758016600AD7704 /* LetterItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
