@@ -20,6 +20,8 @@
 		535567682757E06B00AD7704 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567672757E06B00AD7704 /* Letter.swift */; };
 		5355676A2757EAB900AD7704 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567692757EAB900AD7704 /* ListTableViewCell.swift */; };
 		5355676C2758016600AD7704 /* LetterItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355676B2758016600AD7704 /* LetterItems.swift */; };
+		5355676E275803D500AD7704 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355676D275803D500AD7704 /* LocalNotificationManager.swift */; };
+		53556770275804AD00AD7704 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355676F275804AD00AD7704 /* UIViewController+alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		535567672757E06B00AD7704 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		535567692757EAB900AD7704 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		5355676B2758016600AD7704 /* LetterItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterItems.swift; sourceTree = "<group>"; };
+		5355676D275803D500AD7704 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		5355676F275804AD00AD7704 /* UIViewController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				535567332756FAFA00AD7704 /* AppDelegate.swift */,
 				535567352756FAFA00AD7704 /* SceneDelegate.swift */,
+				5355676D275803D500AD7704 /* LocalNotificationManager.swift */,
+				5355676F275804AD00AD7704 /* UIViewController+alert.swift */,
 				535567672757E06B00AD7704 /* Letter.swift */,
 				5355676B2758016600AD7704 /* LetterItems.swift */,
 				535567372756FAFA00AD7704 /* ViewController.swift */,
@@ -273,9 +279,11 @@
 				535567662757230900AD7704 /* DetailTableViewController.swift in Sources */,
 				535567382756FAFA00AD7704 /* ViewController.swift in Sources */,
 				535567682757E06B00AD7704 /* Letter.swift in Sources */,
+				53556770275804AD00AD7704 /* UIViewController+alert.swift in Sources */,
 				535567342756FAFA00AD7704 /* AppDelegate.swift in Sources */,
 				535567362756FAFA00AD7704 /* SceneDelegate.swift in Sources */,
 				5355676A2757EAB900AD7704 /* ListTableViewCell.swift in Sources */,
+				5355676E275803D500AD7704 /* LocalNotificationManager.swift in Sources */,
 				5355676C2758016600AD7704 /* LetterItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +470,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,6 +498,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

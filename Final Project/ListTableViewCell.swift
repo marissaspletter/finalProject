@@ -18,10 +18,10 @@ class ListTableViewCell: UITableViewCell {
     
     weak var delegate: ListTableViewCellDelegate?
     
-    var toDoItem: ToDoItem! {
+    var letterItem: LetterItem! {
         didSet {
-            nameLabel.text = toDoItem.name
-            checkBoxButton.isSelected = toDoItem.completed
+            nameLabel.text = letterItem.name
+            checkBoxButton.isSelected = letterItem.completed
         }
     }
     
