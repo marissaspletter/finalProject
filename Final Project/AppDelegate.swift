@@ -10,11 +10,18 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+//    func registerForPushNotifications() {
+//            UNUserNotificationCenter.current()
+//                .requestAuthorization(options: [.alert, .sound, .badge]) {(granted, error) in
+//                    print("Permission granted: \(granted)")
+//            }
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         UNUserNotificationCenter.current().delegate = self
-        
+//        registerForPushNotifications()
         return true
     }
 
@@ -39,7 +46,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let id = notification.request.identifier
         print("Received in-app notification with ID = \(id)")
         // I added this - let's see if it works
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        //UNUserNotificationCenter.current().removeAllDeliveredNotifications()
  
         completionHandler([.sound, .alert])
     }
