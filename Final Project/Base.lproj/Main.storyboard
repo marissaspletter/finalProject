@@ -33,11 +33,16 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRr-h9-lhZ">
                                                     <rect key="frame" x="32" y="7" width="44" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" name="5"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="circle" catalog="system">
+                                                        <color key="titleColor" name="4"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                                     </state>
-                                                    <state key="selected" image="circle.fill" catalog="system"/>
+                                                    <state key="selected" image="circle.fill" catalog="system">
+                                                        <color key="titleColor" name="5"/>
+                                                        <color key="titleShadowColor" name="4"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="checkToggled:" destination="Svu-Ah-NXo" eventType="touchUpInside" id="xgJ-gW-BIu"/>
                                                     </connections>
@@ -45,7 +50,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will be a letter!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sci-pF-bBa">
                                                     <rect key="frame" x="84" y="11" width="299" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -61,7 +66,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="1"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rJz-YJ-6Rz" secondAttribute="bottom" id="0hm-dw-AdT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rJz-YJ-6Rz" secondAttribute="trailing" id="BQz-E7-WCE"/>
@@ -70,14 +75,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Letter List" largeTitleDisplayMode="always" id="bML-mG-rf5">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="FlD-le-Lel"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="FlD-le-Lel">
+                            <color key="tintColor" name="5"/>
+                            <connections>
+                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="RVD-kl-czN"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ku2-JW-P6G">
+                            <color key="tintColor" name="5"/>
                             <connections>
                                 <segue destination="6ZF-iN-Ofa" kind="presentation" identifier="AddDetail" id="9zs-KA-ksJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBarButton" destination="ku2-JW-P6G" id="0lS-sY-JA4"/>
                         <outlet property="tableView" destination="rJz-YJ-6Rz" id="E4e-3i-ZTv"/>
                     </connections>
                 </viewController>
@@ -93,6 +105,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" name="1"/>
                         <sections>
                             <tableViewSection headerTitle="Title" id="ESS-TQ-8Ry">
                                 <cells>
@@ -106,7 +119,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This will be a letter title!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmZ-Vg-ExD">
                                                     <rect key="frame" x="20" y="5" width="374" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <action selector="textFieldEditingChanged:" destination="Mfm-hx-Z3T" eventType="editingDidEnd" id="DJX-bq-a2Q"/>
@@ -126,13 +139,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/12/12, 12:12 pm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCS-mH-yfC">
-                                                    <rect key="frame" x="234" y="11" width="160" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-b0-DJ6">
                                                     <rect key="frame" x="20" y="7" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -140,7 +146,29 @@
                                                         <action selector="reminderSwitchChanged:" destination="Mfm-hx-Z3T" eventType="valueChanged" id="n8m-5f-fnM"/>
                                                     </connections>
                                                 </switch>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ufa-PU-1ZI">
+                                                    <rect key="frame" x="216" y="0.0" width="182" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="182" id="Ue7-dn-XII"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="Mfm-hx-Z3T" eventType="valueChanged" id="qdf-nD-ZKu"/>
+                                                    </connections>
+                                                </datePicker>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/12/12, 12:12 pm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCS-mH-yfC">
+                                                    <rect key="frame" x="216" y="0.0" width="182" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ufa-PU-1ZI" secondAttribute="trailing" constant="16" id="0Gg-Mz-m8l"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ufa-PU-1ZI" secondAttribute="bottom" id="B2s-NS-CGl"/>
+                                                <constraint firstItem="Ufa-PU-1ZI" firstAttribute="top" secondItem="SA6-LM-kEp" secondAttribute="top" id="D3M-Zs-ajT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="200" id="c5p-rQ-H7f">
@@ -177,7 +205,7 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
@@ -193,17 +221,20 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="CSk-RZ-nqq">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="MNa-Up-D9s">
+                            <color key="tintColor" name="5"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="Mfm-hx-Z3T" id="gwK-p3-Gds"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="P2H-4t-idP">
+                            <color key="tintColor" name="5"/>
                             <connections>
                                 <segue destination="wbe-No-Pbm" kind="unwind" unwindAction="unwindFromDetailWithSegue:" id="qYC-QE-0DU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="compactDatePicker" destination="Ufa-PU-1ZI" id="mUi-J4-cCd"/>
                         <outlet property="dateLabel" destination="cCS-mH-yfC" id="qow-Ty-K6C"/>
                         <outlet property="datePicker" destination="QFW-B9-8Uy" id="lC6-oO-zYp"/>
                         <outlet property="nameField" destination="BmZ-Vg-ExD" id="WCu-WW-dJg"/>
@@ -215,7 +246,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OmP-zr-Cf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wbe-No-Pbm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2763.768115942029" y="88.392857142857139"/>
+            <point key="canvasLocation" x="2762.3188405797105" y="88.392857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OA2-o2-iYl">
@@ -227,12 +258,19 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="4"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="rnQ-X6-AQs">
                         <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="4"/>
+                        <toolbarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="4"/>
+                            <color key="shadowColor" name="3"/>
+                        </toolbarAppearance>
                     </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Isd-SL-dcq"/>
@@ -276,10 +314,16 @@
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="1">
-            <color red="0.96862745289999996" green="0.81176471709999998" blue="0.71372550729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.96899998188018799" green="0.81199997663497925" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="3">
+            <color red="0.85500001907348633" green="0.60799998044967651" blue="0.61599999666213989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="4">
-            <color red="0.6784313917" green="0.52156865600000002" blue="0.55294120309999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.67799997329711914" green="0.5220000147819519" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="5">
+            <color red="0.42399999499320984" green="0.40799999237060547" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
