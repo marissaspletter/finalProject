@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		531EE2AA275AB239003B3C5D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531EE2A9275AB239003B3C5D /* AboutViewController.swift */; };
 		535567342756FAFA00AD7704 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567332756FAFA00AD7704 /* AppDelegate.swift */; };
 		535567362756FAFA00AD7704 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567352756FAFA00AD7704 /* SceneDelegate.swift */; };
 		535567382756FAFA00AD7704 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535567372756FAFA00AD7704 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		531EE2A9275AB239003B3C5D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		535567302756FAFA00AD7704 /* Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		535567332756FAFA00AD7704 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		535567352756FAFA00AD7704 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				535567672757E06B00AD7704 /* Letter.swift */,
 				5355676B2758016600AD7704 /* LetterItems.swift */,
 				535567372756FAFA00AD7704 /* ViewController.swift */,
+				531EE2A9275AB239003B3C5D /* AboutViewController.swift */,
 				535567392756FAFA00AD7704 /* Main.storyboard */,
 				535567652757230900AD7704 /* DetailTableViewController.swift */,
 				535567692757EAB900AD7704 /* ListTableViewCell.swift */,
@@ -284,6 +287,7 @@
 				535567362756FAFA00AD7704 /* SceneDelegate.swift in Sources */,
 				5355676A2757EAB900AD7704 /* ListTableViewCell.swift in Sources */,
 				5355676E275803D500AD7704 /* LocalNotificationManager.swift in Sources */,
+				531EE2AA275AB239003B3C5D /* AboutViewController.swift in Sources */,
 				5355676C2758016600AD7704 /* LetterItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

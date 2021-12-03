@@ -11,6 +11,16 @@ protocol ListTableViewCellDelegate: AnyObject {
     func checkBoxToggle(sender: ListTableViewCell)
 }
 
+private let dateFormatter: DateFormatter = {
+    print("📅 This is my date formatter")
+    let dateFormatter = DateFormatter()
+    //let timeFormatter = RelativeDateTimeFormatter
+    dateFormatter.dateStyle = .none
+    dateFormatter.timeStyle = .short
+    dateFormatter.dateFormat = "HH, mm"
+    return dateFormatter
+}()
+
 class ListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var checkBoxButton: UIButton!
@@ -21,7 +31,11 @@ class ListTableViewCell: UITableViewCell {
     var letterItem: LetterItem! {
         didSet {
             nameLabel.text = letterItem.name
-            timeCountLabel.text = "Estimated time: \(letterItem.timeToComplete)"
+//            let timeFormatted = dateFormatter.string(from: letterItem.timeToComplete).prefix(5)
+//            let secFormatted = timeFormatted.suffix(3)
+//            let hrFormatted = timeFormatted.prefix(1)
+//            timeCountLabel.text = "Estimated time: \(hrFormatted) hours, \(secFormatted) seconds"
+            timeCountLabel.text = "Estimated time: \(dateFormatter.string(from: letterItem.timeToComplete)) "
             checkBoxButton.isSelected = letterItem.completed
         }
     }

@@ -11,7 +11,8 @@ import UserNotifications
 private let dateFormatter: DateFormatter = {
     print("📅 This is my date formatter")
     let dateFormatter = DateFormatter()
-    dateFormatter.dateStyle = .short
+    //let timeFormatter = RelativeDateTimeFormatter
+    dateFormatter.dateStyle = .none
     dateFormatter.timeStyle = .short
     return dateFormatter
 }()
