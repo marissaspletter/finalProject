@@ -14,4 +14,5 @@ struct LetterItem: Codable {
     var reminderSet: Bool
     var notificationID: String?
     var completed: Bool
+    var timeToComplete: Date
 }

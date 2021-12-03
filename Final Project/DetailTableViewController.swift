@@ -9,7 +9,7 @@ import UIKit
 import UserNotifications
 
 private let dateFormatter: DateFormatter = {
-    print("📅 I JUST CREATED A DATE FORMATTER!")
+    print("📅 This is my date formatter")
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .short
     dateFormatter.timeStyle = .short
@@ -24,8 +24,9 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var reminderSwitch: UISwitch!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var compactDatePicker: UIDatePicker!
-
-     var letterItem: LetterItem!
+    @IBOutlet weak var timeToComplete: UIDatePicker!
+    
+    var letterItem: LetterItem!
 
     let datePickerIndexPath = IndexPath(row: 1, section: 1)
     let notesTextViewIndexPath = IndexPath(row: 0, section: 2)
@@ -56,9 +57,10 @@ class DetailTableViewController: UITableViewController {
         nameField.delegate = self
 
         if letterItem == nil {
-            letterItem = LetterItem(name: "", date: Date().addingTimeInterval(24*60*60), notes: "", reminderSet: false, completed: false)
+            letterItem = LetterItem(name: "", date: Date().addingTimeInterval(24*60*60), notes: "", reminderSet: false, completed: false, timeToComplete: Date().addingTimeInterval(60*15))
             nameField.becomeFirstResponder()
         }
+        //timeToComplete.countDownDuration = 60.0 * 15 //Fifteen minutes
         updateUserInterface()
     }
 
@@ -70,6 +72,7 @@ class DetailTableViewController: UITableViewController {
     func updateUserInterface() {
         nameField.text = letterItem.name
         datePicker.date = letterItem.date
+        timeToComplete.date = letterItem.timeToComplete
         noteView.text = letterItem.notes
         reminderSwitch.isOn = letterItem.reminderSet
         dateLabel.textColor = (reminderSwitch.isOn ? .black : .gray)
@@ -96,7 +99,7 @@ class DetailTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        letterItem = LetterItem(name: nameField.text!, date: datePicker.date, notes: noteView.text, reminderSet: reminderSwitch.isOn, completed: letterItem.completed)
+        letterItem = LetterItem(name: nameField.text!, date: datePicker.date, notes: noteView.text, reminderSet: reminderSwitch.isOn, completed: letterItem.completed, timeToComplete: timeToComplete.date)
     }
 
     func enableDisableSaveButton(text: String) {
@@ -128,6 +131,8 @@ class DetailTableViewController: UITableViewController {
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
         enableDisableSaveButton(text: sender.text!)
     }
+    
+
 }
 
 extension DetailTableViewController {

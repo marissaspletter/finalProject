@@ -106,4 +106,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, ListTableV
         letterItems.itemsArray.insert(itemToMove, at: destinationIndexPath.row)
         saveData()
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 }

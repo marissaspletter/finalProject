@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ListTableViewCellDelegate: class {
+protocol ListTableViewCellDelegate: AnyObject {
     func checkBoxToggle(sender: ListTableViewCell)
 }
 
@@ -15,12 +15,13 @@ class ListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var checkBoxButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
-    
+    @IBOutlet weak var timeCountLabel: UILabel!
     weak var delegate: ListTableViewCellDelegate?
     
     var letterItem: LetterItem! {
         didSet {
             nameLabel.text = letterItem.name
+            timeCountLabel.text = "Estimated time: \(letterItem.timeToComplete)"
             checkBoxButton.isSelected = letterItem.completed
         }
     }
