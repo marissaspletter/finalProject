@@ -35,7 +35,8 @@ class ListTableViewCell: UITableViewCell {
 //            let secFormatted = timeFormatted.suffix(3)
 //            let hrFormatted = timeFormatted.prefix(1)
 //            timeCountLabel.text = "Estimated time: \(hrFormatted) hours, \(secFormatted) seconds"
-            timeCountLabel.text = "Estimated time: \(dateFormatter.string(from: letterItem.timeToComplete)) "
+            let formattedTime = (dateFormatter.string(from: letterItem.timeToComplete))
+            timeCountLabel.text = "Estimated time: \(formattedTime.prefix(2)) hr. \(formattedTime.suffix(3)) sec. "
             checkBoxButton.isSelected = letterItem.completed
         }
     }

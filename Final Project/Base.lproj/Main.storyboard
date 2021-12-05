@@ -30,8 +30,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRr-h9-lhZ">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRr-h9-lhZ">
                                                     <rect key="frame" x="20" y="24" width="41.5" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" name="4"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="doc.circle" catalog="system">
@@ -46,35 +47,21 @@
                                                         <action selector="checkToggled:" destination="Svu-Ah-NXo" eventType="touchUpInside" id="xgJ-gW-BIu"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This will be homework!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sci-pF-bBa">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will be homework!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sci-pF-bBa">
                                                     <rect key="frame" x="69.5" y="11" width="301.5" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count down time" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miB-73-1aB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count down time" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miB-73-1aB">
                                                     <rect key="frame" x="69.5" y="46" width="301.5" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="miB-73-1aB" firstAttribute="bottom" secondItem="diz-t0-8ix" secondAttribute="bottomMargin" id="1pc-1k-u1o"/>
-                                                <constraint firstItem="FRr-h9-lhZ" firstAttribute="leading" secondItem="diz-t0-8ix" secondAttribute="leadingMargin" id="3Hh-VE-OpY"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="miB-73-1aB" secondAttribute="trailing" constant="23" id="88d-rY-sGw"/>
-                                                <constraint firstItem="miB-73-1aB" firstAttribute="top" secondItem="diz-t0-8ix" secondAttribute="topMargin" constant="35" id="8Zj-T1-TwO"/>
-                                                <constraint firstItem="FRr-h9-lhZ" firstAttribute="top" secondItem="diz-t0-8ix" secondAttribute="topMargin" constant="13" id="C08-pb-C5Y"/>
-                                                <constraint firstItem="Sci-pF-bBa" firstAttribute="leading" secondItem="FRr-h9-lhZ" secondAttribute="trailing" constant="8" symbolic="YES" id="GnV-1A-hyV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Sci-pF-bBa" secondAttribute="trailing" constant="23" id="R0p-vJ-b7g"/>
-                                                <constraint firstItem="FRr-h9-lhZ" firstAttribute="leading" secondItem="diz-t0-8ix" secondAttribute="leadingMargin" id="Ycw-3h-mJ2"/>
-                                                <constraint firstItem="miB-73-1aB" firstAttribute="leading" secondItem="FRr-h9-lhZ" secondAttribute="trailing" constant="8" symbolic="YES" id="h9n-ri-6Mu"/>
-                                                <constraint firstItem="Sci-pF-bBa" firstAttribute="top" secondItem="diz-t0-8ix" secondAttribute="topMargin" id="hDA-am-4jd"/>
-                                                <constraint firstItem="miB-73-1aB" firstAttribute="leading" secondItem="FRr-h9-lhZ" secondAttribute="trailing" constant="8" symbolic="YES" id="pPr-DO-28w"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="FRr-h9-lhZ" secondAttribute="bottom" constant="14" id="rBT-ey-l8T"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Sci-pF-bBa" secondAttribute="bottom" constant="22" id="xnG-TN-o8E"/>
-                                                <constraint firstItem="Sci-pF-bBa" firstAttribute="leading" secondItem="FRr-h9-lhZ" secondAttribute="trailing" constant="8" symbolic="YES" id="zFJ-5E-Wm8"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="checkBoxButton" destination="FRr-h9-lhZ" id="Axf-eL-hXO"/>
@@ -176,6 +163,9 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISYS2160.01 Fall 2021 Intro to Programming using Swift for iOS App Development" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="A0q-aG-LPr">
                                         <rect key="frame" x="27" y="558" width="359" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="76" id="1qb-5y-wmd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                         <color key="textColor" name="5"/>
                                         <nil key="highlightedColor"/>
