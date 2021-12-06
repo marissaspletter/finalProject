@@ -7,6 +7,7 @@
 
 import UIKit
 import UserNotifications
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var letterItems = LetterItems()
+    var audioPlayer: AVAudioPlayer!
+    
+    func playSound(name:String) {
+        if let sound = NSDataAsset(name:name) {
+            do {
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            }catch {
+                print("ERROR: \(error.localizedDescription)")
+            }
+        } else {
+            print("ERROR")
+        }
+         
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +85,11 @@ class ViewController: UIViewController {
             addBarButton.isEnabled = false
         }
     }
+    
+    @IBAction func checkChanged(_ sender: Any) {
+        playSound(name: "that_was_easy")
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource, ListTableViewCellDelegate {
@@ -95,6 +116,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, ListTableV
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             letterItems.itemsArray.remove(at: indexPath.row)
+            playSound(name: "trash")
             tableView.deleteRows(at: [indexPath], with: .fade)
             saveData()
         }
